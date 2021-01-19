@@ -1,0 +1,35 @@
+Name: Prabh Kooner
+ID#: 1621233
+CCID: prabhnoo
+CMPUT 274 Fall 2020
+Assignment 2: Huffman Compression
+
+Included Files:
+- Makefile: automatically start web server, various tests
+- bitio.py: Contains the classs BitWriter and BitReader
+- compress.py: Runs the code to compress a file.
+- decompress.py: Runs the code to decompress a file.
+- huffman.py: Used to create huffman trees as well as encode and decode messages.
+- util.py: Contains the five functions read_tree(), decode_byte(), write_tree(), compress(), and decompress() 
+
+
+Notes and Assumptions:
+	The file util.py is to be used in conjuction with several programs. Firstly, bitio.py provides the ability to read and write bits when dealing with binary files. huffman.py is contains classes needed to build and process huffman trees. Finally, compress.py and decompress.py which mainly use functions in util.py to compress and decompress respectively.
+
+	util.py provides functionality for compressing a binary file. A huffman compression approach is used. A huffman tree for the binary file is created and written out. Using this tree, the data is encoding. The encoded data is the also written out into a compressed file.
+
+	Similarly, util.py provides functionality for decompressing a file. The encoding data is used to traverse the huffman tree and obtain the respective leaf node values.   
+
+
+
+Running Instructions:
+	Ensure your current directory contains:
+	huffman.py, bitio.py, compress.py, decompress.py
+	and util.py.
+
+	Example usage:
+
+	python3 compress.py file.txt
+	python3 compress.py oval.png
+	python3 decompress.py file.txt.huf
+	python3 decompress.py oval.png.huf
