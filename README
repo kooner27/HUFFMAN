@@ -7,13 +7,13 @@ Assignment 2: Huffman Compression
 
 Included Files:
 
-- Makefile: automatically start web server, various tests bitio.py: Contains the
-- classs BitWriter and BitReader compress.py: Runs the code to compress a file.
-- decompress.py: Runs the code to decompress a file. huffman.py: Used to create
-- huffman trees as well as encode and decode messages. util.py: Contains the
-- five functions read_tree(), decode_byte(), write_tree(), compress(), and
-- decompress()  webserver.py: The file that allows viewing of the compressed
-- files as they are being sent to the web browser
+- Makefile: automatically start web server, has various tests 
+- bitio.py: Contains the classes BitWriter and BitReader
+- compress.py: Runs the code to compress a file
+- decompress.py: Runs the code to decompress a file
+- huffman.py: Used to create huffman trees as well as encode and decode messages
+- util.py: Contains the five functions read_tree(), decode_byte(), write_tree(), compress(), and decompress()
+- webserver.py: The file that allows viewing of the compressed files as they are being sent to the web browser
 
 
 Notes and Assumptions:
