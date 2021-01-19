@@ -1,45 +1,60 @@
-Name: Prabh Kooner
-ID#: 1621233
-CCID: prabhnoo
-CMPUT 274 Fall 2020
+Name: Prabh Kooner 
+ID#: 1621233 
+CCID: prabhnoo 
+CMPUT 274 Fall 2020 
 Assignment 2: Huffman Compression
+
 
 Included Files:
 
-- Makefile: automatically start web server, various tests
-- bitio.py: Contains the classs BitWriter and BitReader
-- compress.py: Runs the code to compress a file.
-- decompress.py: Runs the code to decompress a file.
-- huffman.py: Used to create huffman trees as well as encode and decode messages.
-- util.py: Contains the five functions read_tree(), decode_byte(), write_tree(), compress(), and decompress() 
-- webserver.py: The file that allows viewing of the compressed files as they are being sent to the web browser
+- Makefile: automatically start web server, various tests bitio.py: Contains the
+- classs BitWriter and BitReader compress.py: Runs the code to compress a file.
+- decompress.py: Runs the code to decompress a file. huffman.py: Used to create
+- huffman trees as well as encode and decode messages. util.py: Contains the
+- five functions read_tree(), decode_byte(), write_tree(), compress(), and
+- decompress()  webserver.py: The file that allows viewing of the compressed
+- files as they are being sent to the web browser
 
 
 Notes and Assumptions:
 
-	The file util.py is to be used in conjuction with several programs. Firstly, bitio.py provides the ability to read and write bits when dealing with binary files. huffman.py is contains classes needed to build and process huffman trees. Finally, compress.py and decompress.py which mainly use functions in util.py to compress and decompress respectively.
+	The file util.py is to be used in conjuction with several programs. Firstly,
+	bitio.py provides the ability to read and write bits when dealing with binary
+	files. huffman.py is contains classes needed to build and process huffman
+	trees. Finally, compress.py and decompress.py which mainly use functions in
+	util.py to compress and decompress respectively.
 
-	util.py provides functionality for compressing a binary file. A huffman compression approach is used. A huffman tree for the binary file is created and written out. Using this tree, the data is encoding. The encoded data is the also written out into a compressed file.
+	util.py provides functionality for compressing a binary file. A huffman
+	compression approach is used. A huffman tree for the binary file is created and
+	written out. Using this tree, the data is encoding. The encoded data is the
+	also written out into a compressed file.
 
-	Similarly, util.py provides functionality for decompressing a file. The encoding data is used to traverse the huffman tree and obtain the respective leaf node values.   
-
+	Similarly, util.py provides functionality for decompressing a file. The
+	encoding data is used to traverse the huffman tree and obtain the respective
+	leaf node values.   
 
 
 Running Instructions:
 
-	Ensure your current directory contains:
-	huffman.py, bitio.py, compress.py, decompress.py
-	and util.py.
+	Ensure your current directory contains: huffman.py, bitio.py, compress.py,
+	decompress.py and util.py.
 
 	Example usage:
 
-	python3 compress.py file.txt
-	python3 compress.py oval.png
-	python3 decompress.py file.txt.huf
-	python3 decompress.py oval.png.huf
+	python3 compress.py file.txt python3 compress.py oval.png python3 decompress.py
+	file.txt.huf python3 decompress.py oval.png.huf
+
 
 Running the Webserver:
 
-Go to the wwwroot directory. Open a bash terminal and open the web server using "python3 ../webserver.py". You can then go to the url "http://localhost:8000" to view the webpage and image of Huffman that will appear if the decompressor is functioning properly. Note that the port can be changed by modifying the variable port in webserver.py.
+	Go to the wwwroot directory. Open a bash terminal and open the web server using
+	"python3 ../webserver.py". You can then go to the url "http://localhost:8000" to
+	view the webpage and image of Huffman that will appear if the decompressor is
+	functioning properly. Note that the port can be changed by modifying the
+	variable port in webserver.py.
 
-To compress a file, first copy that file over to the wwwroot directory and then move to that directory and type "python3 ../compress.py somefile.ext" where somefile is the name of the file you wish to compress and ext is the extension. Then go to the url "http://localhost:8000/somefile.ext" to view and/or download the decompressed file.
+	To compress a file, first copy that file over to the wwwroot directory and then
+	move to that directory and type "python3 ../compress.py somefile.ext" where
+	somefile is the name of the file you wish to compress and ext is the extension.
+	Then go to the url "http://localhost:8000/somefile.ext" to view and/or download
+	the decompressed file.
